@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khenpers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .screen {
+      display: none;
+    }
+
+    .active {
+      display: flex;
+    }
+
+    .header-bar, .top-bar {
+      background-color: black;
+      height: 70px;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .header-bar img, .top-bar img {
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .header-bar span, .top-bar span {
+      font-size: 18px;
+    }
+
+    .main-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 250px;
+      height: auto;
+      margin: 30px auto;
+    }
+
+    .nav-buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #333;
+    }
+
+    .section {
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      border: 2px solid black;
+      width: 250px;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid black;
+    }
+
+    .card-title {
+      font-weight: bold;
+      text-decoration: underline;
+      margin: 10px;
+    }
+
+    .card-content {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .quote {
+      font-size: 16px;
+      font-style: italic;
+      margin: 10px auto;
+    }
+
+    /* Entry Page Styles */
+    #entry-page {
+      height: 100vh;
+      background: linear-gradient(to right, #000000, #434343);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #entry-page h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    #entry-page button {
+      font-size: 20px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 12px;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+
+    #entry-page button:hover {
+      background-color: #ddd;
+    }
+
+    .pattern-container {
+      display: flex;
+      width: 100%;
+    }
+
+    .pattern {
+      flex: 1;
+      background-image: repeating-linear-gradient(
+        45deg,
+        black,
+        black 10px,
+        white 10px,
+        white 20px
+      );
+      background-size: 40px 40px;
+    }
+
+    .pattern-content {
+      flex: 2;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .pattern-content h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="entry-page">
+    <h1>Welcome to Khenpers</h1>
+    <p>Your guide to fitness, wellness, and adventure</p>
+    <button onclick="enterSite()">Enter Site</button>
+  </div>
+
+  <div id="main-site" style="display:none;">
+    <div class="header-bar">
+      <img class="logo" src="https://i.ibb.co/yBpYg0Kz/Khenpers-no-background.png" alt="Khenpers Logo" />
+      <span>Khenpers</span>
+    </div>
+
+    <div class="main-content">
+      <img class="logo" src="https://i.ibb.co/yBpYg0Kz/Khenpers-no-background.png" alt="Khenpers Logo" />
+      <div class="nav-buttons">
+        <button onclick="showSection('motivation')">Motivation</button>
+        <button onclick="showSection('podcasts')">Podcasts & Playlists</button>
+        <button onclick="showSection('travel')">Travel</button>
+        <button onclick="showSection('meals')">Healthy Meals</button>
+      </div>
+
+      <div id="motivation" class="section screen active">
+        <h2>Fitness Motivation</h2>
+        <p class="quote">"Kahit paunti-unti, basta tuloy-tuloy."</p>
+        <p class="quote">"Para ‘to sa mas malakas na ako."</p>
+        <p class="quote">"Hindi mo kailangan ng mamahaling gym, disiplina ang puhunan."</p>
+        <p class="quote">"Isipin mo ‘yung damit na gustong-gusto mong kasya ulit."</p>
+        <p class="quote">"Kapag pagod ka na, tandaan mo kung bakit ka nagsimula."</p>
+      </div>
+
+      <div id="podcasts" class="section screen">
+        <div class="pattern-container">
+          <div class="pattern"></div>
+          <div class="pattern-content">
+            <h2>Podcasts & Playlists</h2>
+            <div class="cards">
+              <div class="card">
+                <img src="https://i.ibb.co/h1cNRknL/Screenshot-2025-05-22-171024.png" alt="Podcast">
+                <div class="card-title">Podcast</div>
+                <div class="card-content">
+                  <ul>
+                    <li>Lakasan Mo, Bes!</li>
+                    <li>Lakad Lang ‘Yan</li>
+                    <li>Pawis Talks</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <img src="https://i.ibb.co/HLjzTPXN/Screenshot-2025-05-22-171043.png" alt="Playlist">
+                <div class="card-title">Playlist</div>
+                <div class="card-content">
+                  <ul>
+                    <li>Hinga, Galaw, Ulit</li>
+                    <li>Lakas Mode: Gym Vibes PH</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pattern"></div>
+        </div>
+      </div>
+
+      <div id="travel" class="section screen">
+        <div class="pattern-container">
+          <div class="pattern"></div>
+          <div class="pattern-content">
+            <h2>Travel</h2>
+            <div class="cards">
+              <div class="card">
+                <img src="https://i.ibb.co/MyBwJqfC/kalanggaman-6.jpg" alt="Kalanggaman Island">
+                <div class="card-title">Kalanggaman Island</div>
+                <div class="card-content">"Minsan, kailangan mo lang ng dagat para gumaan ang pakiramdam."</div>
+              </div>
+              <div class="card">
+                <img src="https://i.ibb.co/PG6LDyVy/Lake-Danao-and-Pineapple-Plantation-Private-Day-Tour-from-Leyte.webp" alt="Lake Danao">
+                <div class="card-title">Lake Danao</div>
+                <div class="card-content">"Ang ganda ng Pilipinas, minsan nasa tabi mo lang."</div>
+              </div>
+              <div class="card">
+                <img src="https://i.ibb.co/Cs4Sq5Gx/4507607244-08096d3854-b.jpg" alt="Canigao Island">
+                <div class="card-title">Canigao Island</div>
+                <div class="card-content">"Kapag pinili mong magpahinga, hindi ka tinatamad—pinipili mong mabuhay."</div>
+              </div>
+            </div>
+          </div>
+          <div class="pattern"></div>
+        </div>
+      </div>
+
+      <div id="meals" class="section screen">
+        <div class="pattern-container">
+          <div class="pattern"></div>
+          <div class="pattern-content">
+            <h2>Healthy Meals</h2>
+            <div class="cards">
+              <div class="card">
+                <img src="https://i.ibb.co/BH4fJYjP/grilledbangus.jpg" alt="Grilled Bangus">
+                <div class="card-title">Grilled Bangus</div>
+                <div class="card-content">Rich in omega-3. Grilled with eggplant salad for fiber and flavor.</div>
+              </div>
+              <div class="card">
+                <img src="https://i.ibb.co/Q70PqWrF/chkentinola.jpg" alt="Chicken Tinola">
+                <div class="card-title">Chicken Tinola</div>
+                <div class="card-content">Lean protein with sayote and malunggay in a clear broth.</div>
+              </div>
+              <div class="card">
+                <img src="https://i.ibb.co/RKBMFw3/ginataangkalabasaatsitaw.jpg" alt="Ginataang Kalabasa at Sitaw">
+                <div class="card-title">Kalabasa at Sitaw</div>
+                <div class="card-content">Beta-carotene rich, fiber-packed, in light coconut milk.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pattern"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.screen').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function enterSite() {
+      document.getElementById('entry-page').style.display = 'none';
+      document.getElementById('main-site').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
